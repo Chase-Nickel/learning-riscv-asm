@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -e
+
+riscv64-unknown-elf-as -g ./$1 -o ./obj/$2.o
+riscv64-unknown-elf-ld -g ./obj/$2.o -o ./bin/$2
